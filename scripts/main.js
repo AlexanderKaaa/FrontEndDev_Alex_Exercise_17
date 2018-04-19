@@ -5,12 +5,13 @@ $(".input-group").filter(":even").addClass("even");
 $("#firstName").on('blur',function()
 {
 if($("#firstName").val()===""){
-$(".errorFirstName").fadeIn();
-
+//$(".errorFirstName").fadeIn();
+$("#firstName").closest(".input-group").find('.requiredMsg').fadeIn();
 }
 
 else{
-$(".errorFirstName").fadeOut();
+//$(".errorFirstName").fadeOut();
+$("#firstName").closest(".input-group").find('.requiredMsg').fadeOut();
 }
 }
 
@@ -20,12 +21,13 @@ $(".errorFirstName").fadeOut();
 $("#lastName").on('blur',function()
 {
 if($("#lastName").val()===""){
-$(".errorLasttName").fadeIn();
-
+//$(".errorLasttName").fadeIn();
+$("#lastName").closest(".input-group").find('.requiredMsg').fadeIn();
 }
 
 else{
-$(".errorLasttName").fadeOut();
+//$(".errorLasttName").fadeOut();
+$("#lastName").closest(".input-group").find('.requiredMsg').fadeOut();
 }
 }
 
@@ -35,12 +37,14 @@ $(".errorLasttName").fadeOut();
 $("#emailAddress").on('blur',function()
 {
 if($("#emailAddress").val()===""){
-$(".errorNoEmail").fadeIn();
+//$(".errorNoEmail").fadeIn();
+$("#emailAddress").closest(".input-group").find('.requiredMsg').fadeIn();
 
 }
 
 else{
-$(".errorNoEmail").fadeOut();
+//$(".errorNoEmail").fadeOut();
+$("#emailAddress").closest(".input-group").find('.requiredMsg').fadeOut();
 }
 }
 
@@ -53,12 +57,14 @@ $("#emailAddress").on('blur',function()
 var emailValid= $("#emailAddress").val();
 
 if(emailValid.indexOf("@") < 0 || emailValid.indexOf(".com") < 0){
-$(".errorEmailNotValid").fadeIn();
+//$(".errorEmailNotValid").fadeIn();
+$("#emailAddress").closest(".input-group").find('.emailMsg').fadeIn();
 
 }
 
 else{
-$(".errorEmailNotValid").fadeOut();
+//$(".errorEmailNotValid").fadeOut();
+$("#emailAddress").closest(".input-group").find('.emailMsg').fadeOut();
 }
 }
 
