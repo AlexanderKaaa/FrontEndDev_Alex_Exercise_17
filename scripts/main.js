@@ -65,20 +65,7 @@ $(".errorEmailNotValid").fadeOut();
 );
 
 
-//first Name Error
-$("#firstName").on('blur',function()
-{
-if($("#firstName").val()===""){
-$(".errorFirstName").fadeIn();
 
-}
-
-else{
-$(".errorFirstName").fadeOut();
-}
-}
-
-);
 
 
 
